@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { MdOutlineDashboard } from "react-icons/md";
 import { HiOutlineUsers } from "react-icons/hi";
 import { IoCubeOutline } from "react-icons/io5";
@@ -11,84 +11,101 @@ import { CiHeadphones } from "react-icons/ci";
 import { PiUserCircleDuotone, PiCopyright } from "react-icons/pi";
 
 const Sidebar = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(prevState => !prevState);
+  };
+
   return (
-    <div className='full-sidebar'>
-        <div className='ditch-dollar'>
+    <div className={`full-sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
+      <button 
+        className="sidebar-toggle-btn"
+        onClick={toggleSidebar}
+      >
+        {isSidebarOpen ? 'Close' : 'Open'}
+      </button>
+
+      {isSidebarOpen && (
+        <>
+          <div className='ditch-dollar'>
             <span className='ditch'>Ditch</span>
             <div className='copyright'>
-                <span className='dollar'>Dollar</span> 
-                <PiCopyright className="copyright-icon" />
+              <span className='dollar'>Dollar</span> 
+              <PiCopyright className="copyright-icon" />
             </div>
-        </div>
+          </div>
 
-        {/* Navigation bar */}
-        <nav className='nav'>
+          {/* Navigation bar */}
+          <nav className='nav'>
             <div className='nav-item'>
-                <MdOutlineDashboard />
-                <span>Dashboard</span>
+              <MdOutlineDashboard />
+              <span>Dashboard</span>
             </div>
             <div className='nav-item'>
-                <HiOutlineUsers />
-                <span>CRM</span>
+              <HiOutlineUsers />
+              <span>CRM</span>
             </div>
             <div className='nav-item'>
-                <IoCubeOutline />
-                <span>MAM</span>
+              <IoCubeOutline />
+              <span>MAM</span>
             </div>
             <div className='nav-item'>
-                <AiOutlinePieChart />
-                <span>PAMM</span>
+              <AiOutlinePieChart />
+              <span>PAMM</span>
             </div>
             <div className='nav-item'>
-                <RiExchangeBoxLine />
-                <span>Trade</span>
+              <RiExchangeBoxLine />
+              <span>Trade</span>
             </div>
             <div className='nav-item'>
-                <RiWalletLine />
-                <span>Wallet</span>
+              <RiWalletLine />
+              <span>Wallet</span>
             </div>
             <div className='nav-item'>
-                <HiOutlineCurrencyDollar  />
-                <span>Accounts</span>
+              <HiOutlineCurrencyDollar />
+              <span>Accounts</span>
             </div>
             <div className='nav-item'>
-                <GoHistory />
-                <span>History</span>
+              <GoHistory />
+              <span>History</span>
             </div>
-        </nav>
+          </nav>
 
-        {/* Bottom section */}
-        <div className='bottom-section'>
+          {/* Bottom section */}
+          <div className='bottom-section'>
             <div className='nav-item'>
-                <FiBell />
-                <span>Notification</span>
+              <FiBell />
+              <span>Notification</span>
             </div>
             <div className='nav-item'>
-                <RiSettings4Line />
-                <span>Settings</span>
+              <RiSettings4Line />
+              <span>Settings</span>
             </div>
             <div className='nav-item'>
-                <CiHeadphones />
-                <span>Help & Support</span>
+              <CiHeadphones />
+              <span>Help & Support</span>
             </div>
             <div className='nav-item'>
-                <RiLogoutBoxLine />
-                <span>Log Out</span>
+              <RiLogoutBoxLine />
+              <span>Log Out</span>
             </div>
 
             <hr className='hr'/>
 
             {/* User info */}
             <div className="user-info">
-                <PiUserCircleDuotone className="user-icon" />
-                <div>
-                    <p className="shyam">Shyam Shakur</p>
-                    <p className="email">shyam01.shankur@m...</p>
-                </div>
+              <PiUserCircleDuotone className="user-icon" />
+              <div>
+                <p className="shyam">Shyam Shakur</p>
+                <p className="email">shyam01.shankur@m...</p>
+              </div>
             </div>            
-        </div>
+          </div>
+        </>
+      )}
     </div>
-  )
+  );
 }
 
 export default Sidebar;
