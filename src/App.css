@@ -1,0 +1,318 @@
+.full-sidebar {
+  width: 16rem; /* 256px */
+  height: 110vh; /* Full screen height */
+  background-color: #B280F8;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures bottom section stays at the bottom */
+  overflow-y: ; /* Allows scrolling if content overflows */
+}
+
+/* Mobile (up to 640px) */
+@media (max-width: 640px) {
+  .full-sidebar {
+    width: 12rem; /* 192px */
+    
+  }
+}
+
+/* Tablet (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .full-sidebar {
+    width: 14rem; /* 224px */
+  }
+}
+
+/* Laptop (1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .full-sidebar {
+    width: 15rem; /* 240px */
+  }
+}
+
+/* PC/Desktop (1281px and above) */
+@media (min-width: 1281px) {
+  .full-sidebar {
+    width: 16rem; /* 256px */
+  }
+}
+
+/* Additional Media Query for Smaller Screens (e.g., Phones) */
+@media (max-width: 480px) {
+  .full-sidebar {
+    width: 10rem;
+    ; /* 160px */
+  }
+}
+
+.copyright {
+  position: relative;
+}
+
+.copyright-icon {
+  position: absolute;
+  font-size: 0.75rem; /* 12px */
+  color: #D1E99B;
+  top: 0;
+  
+  right: -0.6rem;
+  transform: translateY(5px);
+}
+
+.nav {
+  padding-left: 1.5rem; /* 24px */
+  padding-right: 1.5rem; /* 24px */
+  margin-bottom: 2rem; /* 32px */
+}
+
+.nav > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 1rem; /* 16px */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-item > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0.5rem; /* 8px */
+}
+
+.ditch-dollar {
+  padding: 0.75rem; /* 12px */
+  margin-bottom: 1rem; /* 16px */
+  position: relative;
+  margin-left: 2rem; /* 32px */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ditch, .dollar {
+  color: #bee661;
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.ditch {
+  margin-top: -10px;
+  margin-bottom: -12px;
+}
+
+.dollar {
+  margin-left: 1.42rem; /* 28px */
+}
+
+.bottom-section {
+  padding: 1.5rem; /* 24px */
+  margin-top: auto; /* Pushes to the bottom */
+}
+
+.bottom-section > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 1rem; /* 16px */
+}
+
+.hr {
+  border-top-width: 1px;
+  border-color: #ffffff;
+  opacity: 0.5;
+  margin-left: -2rem; /* -32px */
+  margin-right: -2rem; /* -32px */
+  width: calc(100% + 4rem);
+  position: relative;
+  top: 0.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem; /* Spacing from above elements */
+  overflow: hidden;
+}
+
+.shyam {
+  font-size: medium;
+  margin-left: 7px;
+}
+
+.email {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
+  color: #D1D5DB;
+  margin-left: 8px;
+  margin-top: -1px;
+}
+
+.user-icon {
+  background-color: transparent;
+  border-radius: 50%;
+  width: 35px; /* Adjust the size as needed */
+  height: 35px; /* Adjust the size as needed */
+  margin-top: 8px;
+}
+
+
+/* Dashboard Styling */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full screen height */
+  background-color: #f7fafc; /* Light background color */
+  overflow:auto;
+
+  position: relative;
+}
+
+/* Mobile (up to 640px) */
+@media (max-width: 640px) {
+  .dashboard {
+    flex-direction: row; /* Stack elements vertically on small screens */
+    padding: 0 1rem; /* Add padding to the sides */
+  }
+
+  .maincontainer {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    padding: 0; /* Remove padding */
+  }
+}
+
+/* Tablet (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .dashboard {
+    flex-direction: row; /* Default row layout for tablets */
+    padding: 0 1.5rem; /* Adjust padding */
+  }
+
+  .maincontainer {
+    margin-left: 1.5rem; /* Adjust left margin */
+    margin-right: 1.5rem; /* Adjust right margin */
+    padding: 1rem; /* Adjust padding */
+  }
+}
+
+/* Laptop (1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .dashboard {
+    flex-direction: row; /* Default row layout */
+    padding: 0 2rem; /* Adjust padding */
+  }
+
+  .maincontainer {
+    margin-left: 2rem; /* Default left margin */
+    margin-right: 2rem; /* Default right margin */
+    padding: 1.5rem; /* Default padding */
+  }
+}
+
+/* PC/Desktop (1281px and above) */
+@media (min-width: 1281px) {
+  .dashboard {
+    flex-direction: row; /* Default row layout */
+    padding: 0 2.5rem; /* Add more padding for larger screens */
+  }
+
+  .maincontainer {
+    margin-left: 2rem; /* Increase left margin */
+    margin-right: 2.5rem; /* Increase right margin */
+    padding: 0rem; /* Increase padding */
+  }
+}
+
+/* Additional Media Query for Smaller Screens (e.g., Phones) */
+@media (max-width: 480px) {
+  .dashboard {
+    flex-direction: column; /* Stack elements vertically on very small screens */
+    padding: 0 0.5rem; /* Reduce padding */
+  }
+
+  .maincontainer {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    padding: 0.5rem; /* Reduce padding */
+  }
+}
+
+/* Default styling */
+.trading-accounts {
+  padding: 1.5rem; /* p-6 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.account-item {
+  padding: 1rem; /* p-4 */
+}
+
+/* Mobile (up to 640px) */
+@media (max-width: 640px) {
+  .trading-accounts {
+    padding: 1rem; /* Reduce padding */
+  }
+  .account-item {
+    padding: 0.75rem; /* Reduce item padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to the start */
+  }
+  .account-item p {
+    font-size: 0.875rem; /* Adjust font size */
+  }
+}
+
+/* Tablet (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .trading-accounts {
+    padding: 1.25rem; /* Adjust padding */
+  }
+  .account-item {
+    padding: 0.875rem; /* Adjust item padding */
+  }
+}
+
+/* Laptop (1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .trading-accounts {
+    padding: 1.5rem; /* Default padding */
+  }
+  .account-item {
+    padding: 1rem; /* Default item padding */
+  }
+}
+
+/* PC/Desktop (1281px and above) */
+@media (min-width: 1281px) {
+  .trading-accounts {
+    padding: 1.5rem; /* p-6 */
+  }
+  .account-item {
+    padding: 1rem; /* p-4 */
+  }
+}
+
+
+/* Mobile (up to 640px) */
+@media (max-width: 640px) {
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .md\:flex-row {
+    flex-direction: column;
+  }
+
+  .md\:w-2\/3 {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .md\:w-1\/3 {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .space-x-8 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
