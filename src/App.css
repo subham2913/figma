@@ -226,7 +226,7 @@
 /* Additional Media Query for Smaller Screens (e.g., Phones) */
 @media (max-width: 480px) {
   .dashboard {
-    flex-direction: column; /* Stack elements vertically on very small screens */
+    flex-direction: row; /* Stack elements vertically on very small screens */
     padding: 0 0.5rem; /* Reduce padding */
   }
 
