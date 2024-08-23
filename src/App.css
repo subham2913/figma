@@ -317,30 +317,3 @@
   }
 }
 
-.full-sidebar {
-  transition: transform 0.3s ease;
-  /* Add your existing styles here */
-}
-
-.full-sidebar.closed {
-  transform: translateX(-100%);
-  /* Hide sidebar when closed */
-}
-
-.full-sidebar.open {
-  transform: translateX(6);
-  /* Show sidebar when open */
-}
-
-.sidebar-toggle-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #B280F8;
-  color: #ffffff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
